@@ -5,5 +5,5 @@
   
 # Crontab for Linux VM
 # m  h  dom mon dow   command
-  05 00 *   *   *     sh /home/<Linux VM user>/timelapse_generate.sh
-  15 00 *   *   *     sh /home/<Linux VM user>/timelapse_distro.sh
+  05 00 *   *   *     sh /home/<Linux VM user>/timelapse_generate.sh  >/dev/null 2>&1
+  15 00 *   *   *     sh /home/<Linux VM user>/timelapse_distro.sh  >/dev/null 2>&1
