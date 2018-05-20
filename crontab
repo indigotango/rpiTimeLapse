@@ -1,0 +1,9 @@
+# Crontab for Raspberry Pi
+# m  h  dom mon dow command
+  *  *  *   *   *   sh /home/pi/timelapse.sh >/dev/null 2>&1
+  1  *  *   *   *   rsync --remove-source-files /media/TimeLapse/*.jpg <Linux VM user>@<Linux VM IP>:/home/<Linux VM user>/TimeLapse/
+  
+# Crontab for Linux VM
+# m  h  dom mon dow   command
+  05 00 *   *   *     sh /home/<Linux VM user>/timelapse_generate.sh
+  15 00 *   *   *     sh /home/<Linux VM user>/timelapse_distro.sh
